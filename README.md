@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Personal portfolio website for **Shourov**.
 
-First, run the development server:
+Built with AI assistance (Claude Code) and reviewed by a human developer before it goes live.
+
+---
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Linting | ESLint |
+| Bundler | Turbopack |
+| Package manager | npm |
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The dev server starts at http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Other scripts:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run lint
+```
 
-## Learn More
+## Repository layout
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/app/        App Router pages, layouts and global styles
+public/         Static assets (images, icons, fonts)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## For the reviewing developer
 
-## Deploy on Vercel
+**Branching model**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `main` — reviewed and approved code only. Nothing lands here without a merged PR.
+- `dev` — active development branch. All AI-assisted work is committed here.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**How to review**
+
+1. Open the Pull Request from `dev` into `main`.
+2. Comment inline on the diff for anything that needs changing.
+3. Approve and merge when it looks good — `main` is what gets deployed.
+
+**Things worth checking in review**
+
+- Accessibility: semantic HTML, alt text, keyboard navigation, colour contrast.
+- Responsive behaviour on mobile, tablet and desktop.
+- No secrets or API keys committed (`.env*` is gitignored).
+- Lighthouse / Core Web Vitals before deploying.
+
+**Deployment** is not configured yet. Vercel is the natural fit for Next.js, but the final call is the reviewing developer's.
+
+## Notes
+
+`AGENTS.md` and `CLAUDE.md` hold instructions for AI coding agents working in this repo. They do not affect the built site.
