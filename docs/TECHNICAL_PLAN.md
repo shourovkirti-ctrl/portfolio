@@ -192,6 +192,18 @@ Cloudflare also has network presence in Bangladesh, which matters because most o
 - The asset pipeline runs **locally**, not in CI: uploads to R2 are deliberate, and the registry is committed
 - CI checks: typecheck, lint, zod content validation, route weight budget
 
+### 6.2 The lockfile must cover Linux
+
+Development happens on Windows; Cloudflare builds on Linux and runs `npm ci`, which refuses to install if the lockfile does not match `package.json` exactly. A plain `npm install` on Windows omits Linux-only optional dependencies — sharp's `@emnapi/*` packages, in this case — and the build then fails with "can only install packages when your package.json and package-lock.json are in sync".
+
+**After adding or upgrading any dependency, regenerate the lockfile for all platforms:**
+
+```
+npm run relock      # npm install --package-lock-only --os=linux --cpu=x64
+```
+
+This keeps the win32, linux and darwin entries in one lockfile, so `npm ci` works both locally and on the build machine. Verify with `grep -c linux package-lock.json` before pushing.
+
 ### 6.1 Domain
 
 **Build on the free `*.pages.dev` URL; buy the domain before launch.**
