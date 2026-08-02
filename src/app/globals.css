@@ -1,15 +1,24 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/**
+ * Two families, doing different jobs.
+ *
+ * Serif carries the sentences the site actually wants read — the thesis, a
+ * place name, a part title. Sans carries everything structural, and mono
+ * carries anything that is a measurement, a date, a count or an identifier,
+ * because those are the site's evidence and should look like evidence.
+ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: ui-serif, Georgia, "Times New Roman", serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +31,13 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/**
+ * Bengali sits in the same paragraphs as English throughout the long-form
+ * content, and its conjuncts need more room than a Latin line-height gives.
+ */
+:lang(bn) {
+  line-height: 1.9;
 }
