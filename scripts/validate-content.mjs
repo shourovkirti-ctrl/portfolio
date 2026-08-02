@@ -17,7 +17,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
-const { Collections } = await import(
+const { Collections, Series } = await import(
   pathToFileURL(resolve(root, "src/lib/content/schema.ts")).href
 );
 
@@ -28,6 +28,14 @@ const FILES = [
   ["photographs", "content/photographs.json"],
   ["clients", "content/clients.json"],
   ["papers", "content/papers.json"],
+];
+
+/** Narrative series, imported from .docx by scripts/import-series.mjs. */
+const SERIES_FILES = [
+  "content/series/ranir-snanghat.en.json",
+  "content/series/ranir-snanghat.bn.json",
+  "content/series/vishnu-stele.en.json",
+  "content/series/vishnu-stele.bn.json",
 ];
 
 let failed = false;
@@ -79,6 +87,51 @@ for (const [name, relative] of FILES) {
   counts[name] = result.data.length;
   collectAssetIds(result.data);
   console.log(`  ✓ ${name} — ${result.data.length} records`);
+}
+
+console.log("\nseries");
+for (const relative of SERIES_FILES) {
+  const path = resolve(root, relative);
+  if (!existsSync(path)) {
+    fail(relative, "missing — run node scripts/import-series.mjs");
+    continue;
+  }
+  let raw;
+  try {
+    raw = JSON.parse(readFileSync(path, "utf8"));
+  } catch (error) {
+    fail(relative, `invalid JSON — ${error.message}`);
+    continue;
+  }
+  const result = Series.safeParse(raw);
+  if (!result.success) {
+    for (const issue of result.error.issues) {
+      fail(relative, `${issue.path.join(".") || "(root)"}: ${issue.message}`);
+    }
+    continue;
+  }
+  const words = result.data.reduce(
+    (total, part) =>
+      total + part.blocks.reduce((n, b) => n + b.text.split(/\s+/).length, 0),
+    0,
+  );
+  // Each part is meant to be 300–500 words. A part that came through much
+  // shorter usually means the docx reader dropped something.
+  const thin = result.data.filter(
+    (part) =>
+      part.blocks.reduce((n, b) => n + b.text.split(/\s+/).length, 0) < 150,
+  );
+  if (thin.length) {
+    fail(
+      relative,
+      `parts ${thin.map((p) => p.part).join(", ")} are under 150 words — ` +
+        "the import may have dropped content",
+    );
+    continue;
+  }
+  console.log(
+    `  ✓ ${relative.split("/").pop()} — ${result.data.length} parts, ~${words} words`,
+  );
 }
 
 console.log("\nassets");

@@ -1,0 +1,153 @@
+[
+  {
+    "part": 1,
+    "title": "A Masterpiece Left Out in the Rain",
+    "standfirst": "A Pala-Period Vishnu Stele — Varendra Research Museum, Rajshahi · Part 1 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "In mid-2024 I walked onto the open veranda of the Varendra Research Museum in Rajshahi and found a thousand-year-old masterpiece lying on a piece of burlap cloth — fully exposed to direct sunlight, rain, and the open tropical air. It was a large black-stone stele of the Hindu god Vishnu, carved roughly nine hundred years ago, with no display label, no protective barrier, and no shelter. In my judgement this was a conservation emergency of the first order, and it is the reason this entire documentation project exists."
+      },
+      {
+        "type": "paragraph",
+        "text": "This report was not commissioned by anyone. It is independent, voluntary work, driven by a simple conviction: that the archaeological heritage of Bangladesh — so much of it inadequately recorded, poorly stored, and dangerously exposed — deserves systematic scientific attention whether or not someone formally asks for it. When an object like this is at risk, recording it accurately becomes a responsibility."
+      },
+      {
+        "type": "paragraph",
+        "text": "The stele itself carries a small mystery. Stuck to its surface was a handwritten paper label in Bengali, of which I could partly read: a reference to Sherpur Police Station, what appeared to be First Information Report (FIR) No. 52, and a date of 27 August 2022. Reading between the lines, this suggests the stele was not acquired through a legal excavation or antiquities trade at all — it was most likely recovered by police, possibly from an incident of illegal digging or attempted trafficking in the Sherpur area of Mymensingh Division, and then handed to the museum for safekeeping. I can't prove this; I don't have the police file. But if it's correct, it carries a sad implication: somewhere in Sherpur, an unrecorded Pala-period Vaishnava temple site was disturbed — perhaps destroyed — taking with it all the archaeological context that would have helped us understand it."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is exactly the situation where independent documentation matters most. Whatever the legal history of this object, the carved stone itself is an irreplaceable record of the religious and artistic life of medieval Bengal. Over the next four posts I'll show you how to read it, where it comes from, how we scanned it in 3D, and what condition it's in — including a discovery that genuinely surprised me."
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "title": "The Pala World That Made This Sculpture",
+    "standfirst": "A Pala-Period Vishnu Stele — Varendra Research Museum, Rajshahi · Part 2 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "To understand this stele, you have to understand the civilisation that produced it. For several centuries in the early medieval period, the land that is now Bangladesh was one of the most prolific sculpture-producing regions in the entire Indian subcontinent. The engine of that output was the Pala dynasty, which ruled Bengal and Bihar from roughly 750 to 1161 CE."
+      },
+      {
+        "type": "paragraph",
+        "text": "The Palas were one of the last great Buddhist imperial powers of South Asia. Founded by Gopala — by tradition, elected king by the lords of Bengal — the dynasty peaked under Dharmapala and Devapala, whose empire stretched from the Himalayas to the Vindhyas. They were devout Buddhists who patronised the famous monastic universities of Nalanda, Vikramashila, and Somapura (the great Paharpur monastery, now a UNESCO World Heritage Site in Bangladesh). But here is the crucial point: their empire also nurtured a vigorous Hindu tradition. The same workshops that carved Buddhist images also produced Hindu deities of extraordinary quality — and this Brahmanical current intensified under the succeeding Sena dynasty in the 11th–12th centuries."
+      },
+      {
+        "type": "paragraph",
+        "text": "The heartland of this art was the Varendra region — the tract of high, laterite land in today's Rajshahi and Chapai Nawabganj districts. It was here that the signature style of Pala sculpture matured: smooth black stone, elongated and refined proportions, high-relief carving, and dense decorative programmes. It is no accident that the Varendra Research Museum, founded in 1910 by the pioneering Varendra Anusandhan Samiti, now holds one of the largest collections of Pala sculpture in the world, much of it from the Paharpur excavations."
+      },
+      {
+        "type": "paragraph",
+        "text": "Within this world, the worship of Vishnu was widespread — especially in his four-armed (Chaturbhuja) form holding the conch, discus, mace, and lotus. Vishnu steles are among the most numerous category of Pala sculpture ever recovered, which tells us that temples to Vishnu, many now lost or unexcavated, once dotted the region. There was even a standard \"formula\" for how such a stele should look — and as we'll see in the next post, the object in Rajshahi follows that formula almost to the letter, while displaying the technical polish of the mature Pala-Sena phase."
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "title": "How to Read a Vishnu Stele",
+    "standfirst": "A Pala-Period Vishnu Stele — Varendra Research Museum, Rajshahi · Part 3 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A stele like this is not just a statue — it's a carefully coded composition, and once you know the code, you can read it like a page. Let's start at the centre and work outward."
+      },
+      {
+        "type": "paragraph",
+        "text": "The deity. The main figure is the four-armed Vishnu Chaturbhuja, standing in Samabhanga — a perfectly erect, frontal stance with weight balanced equally on both feet, conveying absolute stillness and divine authority. His body shows the classic Pala aesthetic of controlled muscularity, ornamented with the standard Vaishnava insignia: a long gem-garland (Vaijayanti mala) across the chest, armlets (keyura), wristbands (kankana), the sacred thread (yajnopavita), and a draped lower garment (pitambara) with carefully carved folds."
+      },
+      {
+        "type": "paragraph",
+        "text": "The four attributes. Each hand holds an emblem: the Shankha (conch, the sound of creation), the Chakra (discus, divine justice), the Gada (mace, divine power), and the Padma (lotus, purity). Some are now blurred by erosion, but the canonical set is clear."
+      },
+      {
+        "type": "paragraph",
+        "text": "The crown. Vishnu wears the tall cylindrical Kiritamukuta, the crown that specifically distinguishes him from Shiva (matted locks) and from Buddhist deities (the ushnisha)."
+      },
+      {
+        "type": "paragraph",
+        "text": "The attendants. Flanking him are two smaller female figures — his consorts Lakshmi (goddess of prosperity) and Saraswati (goddess of learning, with the veena). At the lower corners are smaller crouching figures, likely devotees or door-guardians (dvarapalas)."
+      },
+      {
+        "type": "paragraph",
+        "text": "The frame. The whole composition sits inside a tall, pointed arch-shaped backplate called the Prabhavali — carved with scrolling foliage and, near the top, hovering celestial beings (Vidyadharas) bearing garlands. At the very apex sits the Kirtimukha, the fierce \"face of glory\" that wards off evil from the sacred image below."
+      },
+      {
+        "type": "paragraph",
+        "text": "The pedestal — and a rare surprise. Vishnu stands on a multi-tiered lotus (padma) platform. And here is the discovery that stopped me: on the carved lotus petals, traces of original red and blue pigment still survive. Scholars have long believed Pala stone images were painted, but the evidence is almost entirely textual — surviving pigment on Pala sculpture is extraordinarily rare. This is a genuine window into how these images originally looked, in full colour. More on why it survived — and why it's in danger — in the final post."
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "title": "Black Stone and 200 Photographs",
+    "standfirst": "A Pala-Period Vishnu Stele — Varendra Research Museum, Rajshahi · Part 4 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "The material. The stele is carved from a dark grey-to-black stone — phyllite or chlorite schist, the signature medium of Pala-Sena sculpture. Older books simply call it \"black stone.\" It was quarried in the Rajmahal Hills region of present-day Jharkhand and eastern Bihar, then carried to the workshops of northern Bengal, because the local laterite — though abundant — is too coarse for fine carving. Phyllite was chosen deliberately: its fine grain takes a smooth, almost reflective polish and holds intricate detail like the jewellery and the foliage of the prabhavali. Its dark colour mattered too — black is the traditional colour of Vishnu in much of north Indian belief. The stele stands roughly 4 to 5 feet (about 120–150 cm) tall, estimated by eye; precise measurement wasn't possible during the visit, which is a limitation worth fixing in any future study."
+      },
+      {
+        "type": "paragraph",
+        "text": "The 3D record. Because the object is fragile and irreplaceable, I documented it with close-range photogrammetry — a contact-free method that rebuilds an object's exact geometry from many overlapping photographs. The equipment was modest and portable: a Canon EOS 80D with a sharp, low-distortion 50mm f/1.8 lens (plus a 10–18mm wide for tight angles) and an external strobe for even lighting. Around 200 photographs were captured in a multi-tier orbital pattern — low angles for the base and pedestal, frontal mid-level for the main body, high angles for the crown and apex, and near-vertical shots for the top and reverse — plus close-ups of the face, hands, damage, and that precious pigment."
+      },
+      {
+        "type": "paragraph",
+        "text": "One honest caveat: no calibrated scale bars or control targets were used, so the model is geometrically accurate in proportion but lacks absolute measurements. Future sessions should add scale bars to fix this."
+      },
+      {
+        "type": "paragraph",
+        "text": "The photos were processed in Agisoft Metashape Professional: align the cameras into a dense hemisphere around the object, build a dense point cloud, then a mesh of 3,562,081 faces and 1,781,742 vertices, and finally project the photographic texture back on. The finished model is published openly on Sketchfab."
+      },
+      {
+        "type": "paragraph",
+        "text": "Why does this matter so much? Because in the absence of any museum catalogue entry, measured drawing, or conservation record for this stele, the 3D model becomes the de facto primary documentation — a precise, dated baseline. Compare a future scan against it and you can measure, to fractions of a millimetre, exactly how much further the object has decayed. And it makes the stele studyable from anywhere in the world. If the worst happens and the object is damaged or lost, this record survives in perpetuity."
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "title": "A Conservation Emergency, and What Must (and Must Not) Be Done",
+    "standfirst": "A Pala-Period Vishnu Stele — Varendra Research Museum, Rajshahi · Part 5 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "The condition assessment told a layered story of damage from three different eras: ancient breakage (probably when the original temple was destroyed), chemical change from long burial, and — most urgently — fresh, accelerating damage from being left outdoors today. Using the same colour-coded zone system as our other heritage work (🔴 CRITICAL, 🟠 FRAGILE, 🟡 STABLE), the survey catalogued the damage zone by zone."
+      },
+      {
+        "type": "paragraph",
+        "text": "The critical zones include the apex fracture (Zone A), where the Kirtimukha at the top is broken and exposed; a diagonal crack through the upper-left prabhavali (Zone B) that makes the slab vulnerable if moved; the broken tenon at the base (Zone H) — the peg that once fixed the stele upright in its shrine, now fractured so badly the stele can't safely stand without consolidation; and, most painfully, the surviving polychrome pigment (Zone I). Fragile zones include surface erosion on the face and crown, damage to the right arm and its Chakra, and the loss of detail on the Lakshmi figure. Calcite encrustation and old whitewash are stable for now but must only be removed by a trained conservator."
+      },
+      {
+        "type": "paragraph",
+        "text": "But the overriding finding is Zone K — active environmental exposure, which I classified not as a slow concern but as an emergency happening in real time. Tropical sunlight bombards the stone with UV and thermal stress; day-night temperature swings cause microscopic fatigue; rain drives moisture into existing cracks; and algae and lichen secrete acids that eat the stone. The rare red and blue pigment is being destroyed as we speak — by my estimate, without intervention it could be lost within months to a few years."
+      },
+      {
+        "type": "paragraph",
+        "text": "So what must be done? The recommendations are blunt and ordered by urgency:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Immediately: remove the stele from outdoor exposure and bring it into a stable indoor environment. This single act stops the worst of the damage."
+      },
+      {
+        "type": "paragraph",
+        "text": "Short term: proper structural assessment, careful handling protocols (especially given the cracks and broken tenon), and protective housing."
+      },
+      {
+        "type": "paragraph",
+        "text": "Long term: professional conservation treatment — desalination, consolidation, and expert evaluation of the encrustation and whitewash."
+      },
+      {
+        "type": "paragraph",
+        "text": "Equally important is the list of what must NOT be done: do not attempt to stand the stele upright on its broken tenon; do not let untrained hands clean the surface or strip the encrustation; do not wash or scrub the pigment; and do not leave it outdoors a day longer than necessary."
+      },
+      {
+        "type": "paragraph",
+        "text": "The deeper point is the one this whole project began with. A premier museum holding a ninth-century masterpiece on an open veranda is not a story about one careless object — it reflects real, system-wide challenges of conservation capacity and resources. This report names those challenges not to criticise, but in the hope that documenting this stele carefully — and sounding the alarm loudly — might help save it, and others like it, while there is still time."
+      }
+    ]
+  }
+]
