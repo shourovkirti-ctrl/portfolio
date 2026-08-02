@@ -10,7 +10,13 @@
 export const SITE_ORIGIN =
   process.env.NEXT_PUBLIC_SITE_ORIGIN ?? "http://localhost:3000";
 
-export const SITE_NAME = "Khondokar Zobaed Hassan";
+/**
+ * "Khondoker", with an e — the spelling on the three papers, on AIUB's own
+ * pages, and the one he chose for the site. His NID reads KHONDOKAR and
+ * several profiles read Shourov; About resolves all of that in one line
+ * rather than leaving a visitor to wonder whether they have the right man.
+ */
+export const SITE_NAME = "Khondoker Zobaed Hassan";
 
 export const SITE_DESCRIPTION =
   "Photographer and heritage documentarian in Dhaka. Records of buildings, " +
