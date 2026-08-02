@@ -1,0 +1,7 @@
+{
+  "dev-probe": {
+    "type": "image",
+    "lod0": { "url": "/dev/probe.bin", "bytes": 4096 },
+    "source": "fixture"
+  }
+}

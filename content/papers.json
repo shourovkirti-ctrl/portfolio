@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "banteay-samre-bakong",
+    "title": "Reconstructing Angkor Temples from Unstructured Found Footage: A 3D Gaussian Splatting Workflow Tested on Banteay Samré and Bakong, Angkor, Cambodia",
+    "kind": "report",
+    "doi": "10.5281/zenodo.21741175",
+    "publishedAt": "2026-08-01",
+    "pdfUrl": "https://zenodo.org/records/21741175"
+  },
+  {
+    "slug": "ranir-snanghat",
+    "title": "Close-Range Photogrammetric Documentation and Condition Assessment of the Ranir Snanghat, a Nineteenth-Century Zamindar Bathing Pavilion at Shoshi Lodge, Mymensingh, Bangladesh",
+    "kind": "preprint",
+    "doi": "10.5281/zenodo.21744242",
+    "publishedAt": "2026-08-01",
+    "pdfUrl": "https://zenodo.org/records/21744242",
+    "relatedPlace": "shashi-lodge"
+  },
+  {
+    "slug": "vishnu-stele",
+    "title": "A Photogrammetric Documentation and Condition Assessment of a Pala-Period Vishnu Stele in the Varendra Research Museum, Rajshahi: A Preliminary Report",
+    "kind": "preprint",
+    "doi": "10.5281/zenodo.21744327",
+    "publishedAt": "2026-08-01",
+    "pdfUrl": "https://zenodo.org/records/21744327"
+  }
+]

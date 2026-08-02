@@ -45,3 +45,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# build output
+/out/
+
+# large assets live outside git — see docs/TECHNICAL_PLAN.md §1
+*.spz
+*.splat
+*.ksplat
+*.ply
+*.glb
+*.gltf
+*.mp4
+*.webm
+*.mov
