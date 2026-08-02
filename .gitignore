@@ -63,3 +63,6 @@ next-env.d.ts
 # Generated on Windows, rejected by npm ci on the Linux build machine.
 # Versions are pinned exactly in package.json instead — see docs/TECHNICAL_PLAN.md 6.2
 package-lock.json
+
+# claude code local settings (launch.json is shared)
+.claude/settings.local.json

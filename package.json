@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run validate && next build",
+    "build": "npm run validate && next build && npm run weights",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "validate": "node --import tsx scripts/validate-content.mjs",
+    "weights": "node scripts/check-weights.mjs",
+    "import-series": "node scripts/import-series.mjs",
     "check": "npm run typecheck && npm run lint && npm run validate"
   },
   "dependencies": {

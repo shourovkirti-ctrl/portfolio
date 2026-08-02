@@ -255,7 +255,9 @@ Contact is minimal — no street address, and email and phone rendered by script
 
 Three phases, sequenced by **how much each depends on content only Shourov can supply** — so the site can be live and credible long before the heaviest work is done.
 
-**v1** — Home (simple), Heritage map and place panels, Research & Writing, About. Needs almost nothing new; the tour links, DOIs and copy already exist.
+**v1** ✅ built — Home (simple), Heritage map and place panels, the exhibitions thread, Research & Writing, About. Needs almost nothing new; the tour links, DOIs and copy already exist.
+
+One rule the build had to invent: **a record that is held but not yet published says so.** Twenty-seven places carry forty formats between them, and fourteen of those are captures that exist on a hard drive and have not been through the asset pipeline. Hiding them would make the archive look smaller than it is; showing them as live would be a claim the site cannot support. They appear as cards marked *held, not yet published*, and pin weight counts them — because what the map is encoding is depth of documentation, not depth of publication.
 
 **v2** — Photography, Commercial, the Paharpur comparison. Needs his curation.
 
