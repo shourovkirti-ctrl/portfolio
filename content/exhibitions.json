@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "sculpture-2024",
+    "name": {
+      "bn": "৬ষ্ঠ জাতীয় ভাস্কর্য প্রদর্শনী",
+      "en": "6th National Sculpture Exhibition"
+    },
+    "institution": {
+      "bn": "বাংলাদেশ শিল্পকলা একাডেমি",
+      "en": "Bangladesh Shilpakala Academy"
+    },
+    "startDate": "2024-12-21",
+    "endDate": "2025-01-19",
+    "tourUrl": "https://sculpture-exhibition-shilpokola-keerti-2024.vercel.app/",
+    "counts": { "panoramas": 174, "works": 217, "halls": 5 }
+  },
+  {
+    "slug": "poster-e-july-obbhutthan",
+    "name": {
+      "bn": "পোস্টারে জুলাই অভ্যুত্থান",
+      "en": "The July Uprising in Posters"
+    },
+    "institution": {
+      "bn": "বাংলাদেশ শিল্পকলা একাডেমি",
+      "en": "Bangladesh Shilpakala Academy"
+    },
+    "venue": {
+      "bn": "গ্যালারি ৫, জাতীয় চিত্রশালা",
+      "en": "Gallery 5, National Art Gallery"
+    },
+    "artist": {
+      "bn": "দেবাশিস চক্রবর্তী",
+      "en": "Debashish Chakrabarty"
+    },
+    "startDate": "2025-01-07",
+    "endDate": "2025-01-19",
+    "counts": { "works": 22 }
+  },
+  {
+    "slug": "brave-daughters-of-july",
+    "name": {
+      "bn": "জুলাইয়ের বীর কন্যা",
+      "en": "The Brave Daughters of July"
+    },
+    "institution": {
+      "bn": "বাংলাদেশ শিল্পকলা একাডেমি",
+      "en": "Bangladesh Shilpakala Academy"
+    },
+    "venue": {
+      "bn": "জাতীয় চিত্রশালা",
+      "en": "National Art Hall"
+    },
+    "startDate": "2025-02-22"
+  },
+  {
+    "slug": "tale-of-the-darkroom-iii",
+    "name": {
+      "bn": "টেল অব দ্য ডার্করুম ৩",
+      "en": "Tale of the Darkroom III"
+    },
+    "institution": {
+      "bn": "এআইইউবি ফটোগ্রাফি ক্লাব",
+      "en": "AIUB Photography Club"
+    }
+  }
+]
