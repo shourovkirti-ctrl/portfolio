@@ -59,3 +59,7 @@ next-env.d.ts
 *.mp4
 *.webm
 *.mov
+
+# Generated on Windows, rejected by npm ci on the Linux build machine.
+# Versions are pinned exactly in package.json instead — see docs/TECHNICAL_PLAN.md 6.2
+package-lock.json

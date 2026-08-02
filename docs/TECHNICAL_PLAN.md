@@ -192,17 +192,22 @@ Cloudflare also has network presence in Bangladesh, which matters because most o
 - The asset pipeline runs **locally**, not in CI: uploads to R2 are deliberate, and the registry is committed
 - CI checks: typecheck, lint, zod content validation, route weight budget
 
-### 6.2 The lockfile must cover Linux
+### 6.2 No lockfile; exact versions instead
 
-Development happens on Windows; Cloudflare builds on Linux and runs `npm ci`, which refuses to install if the lockfile does not match `package.json` exactly. A plain `npm install` on Windows omits Linux-only optional dependencies — sharp's `@emnapi/*` packages, in this case — and the build then fails with "can only install packages when your package.json and package-lock.json are in sync".
-
-**After adding or upgrading any dependency, regenerate the lockfile for all platforms:**
+Development happens on Windows, Cloudflare builds on Linux, and Pages runs `npm ci` whenever a `package-lock.json` is present. `npm ci` is strict: any mismatch between lockfile and `package.json` is a hard stop rather than a resolve. A lockfile generated on Windows failed there repeatedly with
 
 ```
-npm run relock      # npm install --package-lock-only --os=linux --cpu=x64
+Missing: @emnapi/runtime@1.11.3 from lock file
+Missing: @emnapi/core@1.11.3 from lock file
 ```
 
-This keeps the win32, linux and darwin entries in one lockfile, so `npm ci` works both locally and on the build machine. Verify with `grep -c linux package-lock.json` before pushing.
+Those are transitive optional dependencies of Tailwind's wasm fallback. Regenerating with `--os=linux --cpu=x64` added most Linux entries but still not those two, and adding them explicitly did not place them either — a known rough edge with nested optional wasm packages, compounded by the build machine running a different npm major version than the development machine.
+
+**Resolution: `package-lock.json` is gitignored, and every dependency in `package.json` is pinned to an exact version.** With no lockfile, Pages runs `npm install`, which resolves correctly for its own platform, and the exact pins keep direct dependencies from drifting between builds.
+
+The trade-off is honest: transitive dependencies are no longer pinned, so a build is not byte-for-byte reproducible. For a site with this few direct dependencies that is an acceptable cost, and it is recoverable — if reproducibility becomes important, generate the lockfile on Linux in CI and commit that instead.
+
+**When adding a dependency**: install it, then pin the resolved version in `package.json` rather than leaving a `^` range.
 
 ### 6.1 Domain
 
