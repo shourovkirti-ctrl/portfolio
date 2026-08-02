@@ -55,19 +55,19 @@ C:\1 Cluade enviornment\_portfolio-assets\
 
 Separating `source/` from `processed/` is not tidiness — it means a bad conversion is always recoverable. Processing reads from `source/` and writes to `processed/`; it never writes back.
 
-### 1.3 CDN / object storage
+### 1.3 CDN / object storage — Cloudflare R2 (decided)
 
-**Cloudflare R2** — S3-compatible, cheap, and critically **no egress fees**, which matters when a single visitor may pull 15 MB of splats.
+**Cloudflare R2.** S3-compatible, 10 GB stored free permanently, and critically **no egress fees at any volume** — which is the deciding factor when a single visitor may pull 15–40 MB of splats and video. Egress is where object storage normally becomes expensive; on R2 it is zero.
 
-Everything in `processed/` is uploaded there with **content-hashed, immutable filenames** so they can be cached forever:
+Estimated total for this site: roughly 600 MB (≈130 MB of compressed sculpture meshes, ≈100 MB of splats, ≈60 MB of images and posters, ≈300 MB of video). That is well inside the free allowance, with room to grow.
+
+Everything in `processed/` is uploaded with **content-hashed, immutable filenames** so it can be cached forever:
 
 ```
 https://assets.<domain>/splats/paharpur.a1b2c3.lod1.spz
 ```
 
-Alternatives if R2 is not available: Vercel Blob (simpler, more expensive at volume) or Backblaze B2 + Cloudflare. Video full-resolution could alternatively go to unlisted Vimeo.
-
-**Never serve large binaries from Vercel directly** — bandwidth cost and no useful caching control.
+**No large binaries are served from the site host** — only from R2.
 
 ---
 
@@ -176,12 +176,31 @@ For anything motion-based (bobbing rings, dissolves, the chandelier sweep), stil
 
 ---
 
-## 6. Build and deploy
+## 6. Build and deploy — Cloudflare Pages
 
-- Vercel, `main` branch = production, `dev` = preview deployments.
-- Preview URLs on every PR — this is how the human developer reviews, and how Shourov reviews visually.
-- The asset pipeline runs **locally**, not in CI: uploads to R2 happen deliberately, and the registry is committed.
-- CI checks: typecheck, lint, zod content validation, route weight budget.
+**Cloudflare Pages**, not Vercel. Two reasons, both material:
+
+1. **Vercel's free Hobby tier excludes commercial use.** This site lists clients and invites work, which puts it outside those terms; the fallback is $20/month. Cloudflare Pages permits commercial use on the free plan.
+2. **Vercel's free bandwidth is capped at 100 GB/month**, then billed per GB. This is a heavy site — a visitor taking the full 3D route pulls 20–40 MB, so a few thousand visitors would exceed it. **Cloudflare Pages has no bandwidth limit on any tier.**
+
+Cloudflare also has network presence in Bangladesh, which matters because most of the audience is there.
+
+**This works because the site is fully static.** `next build` with `output: 'export'` deploys to Pages directly, with no adapter. Static export disables Next's image optimisation API and middleware — neither is needed, since images are already processed by our own `sharp` pipeline.
+
+- `main` = production · `dev` = preview deployments
+- Preview URL on every PR — how the reviewer checks changes, and how Shourov judges them visually
+- The asset pipeline runs **locally**, not in CI: uploads to R2 are deliberate, and the registry is committed
+- CI checks: typecheck, lint, zod content validation, route weight budget
+
+### 6.1 Domain
+
+**Build on the free `*.pages.dev` URL; buy the domain before launch.**
+
+Changing domain later is technically trivial — Pages lets custom domains be added and removed freely, and static files do not care what host they sit on. The cost of a change is not technical, it is everything that already points at the old address: search indexing, links shared with clients or institutions, the URL written into ORCID or a Zenodo record, and — most importantly here — the ~217 sculpture pages, which are designed so artists can share a link to their own work. Moving those after they have been shared is the one genuinely rude outcome.
+
+None of that cost exists yet, because nothing has been shared. So the free URL is fine through development and review, and the domain gets bought at launch, before anything is publicised.
+
+**The engineering rule that makes this painless: never hardcode the domain.** All internal links are relative; the canonical origin lives in a single environment variable used for `sitemap.xml`, `robots.txt`, canonical tags and Open Graph URLs. Changing hosts is then a one-line change.
 
 **Route weight budgets, enforced in CI:**
 
@@ -217,6 +236,7 @@ Needs his production: 217 catalogue rows, tour mapping, Blender reconstruction, 
 ## 8. Open technical items
 
 - Confirm `ffmpeg` availability on the machine
-- Choose CDN (R2 assumed) and create the bucket
+- Create the Cloudflare account, the Pages project and the R2 bucket
+- Decide the domain name (needed at launch, not before)
 - Paharpur mesh↔splat **registration** — align in CloudCompare/Blender, bake the transform, verify by toggle. Runtime sync is trivial (one camera, two viewports via scissor test); alignment is the real work and it is offline.
 - Build the tour-position capture helper (reads panorama + yaw + pitch from `window.tour.player`) — validates on the Venus statue first, then serves the 217 sculptures.
