@@ -1,0 +1,205 @@
+[
+  {
+    "part": 1,
+    "title": "The Queen's Forgotten Bathing Pavilion",
+    "standfirst": "Ranir Snanghat — The Queen's Bathing Pavilion of Shoshi Lodge · Part 1 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "At the northern corner of an ornamental pond in Mymensingh, half-stepping into the water, stands a small two-storey marble pavilion that almost nobody has properly studied. It is called the Ranir Snanghat — literally \"the Queen's Bathing Ghat\" — and for the women of the Muktagacha Zamindar family it was a private place to bathe, rest, and look out over the water toward Shoshi Lodge, the family's grand urban palace."
+      },
+      {
+        "type": "paragraph",
+        "text": "The building belongs to the late-nineteenth-century world of Bengal's Zamindars, the aristocratic landholding families whose wealth produced a building boom of palaces, temples, and garden structures across the region. The Ranir Snanghat was a piece of that world's quiet, domestic side: it answered a very specific need. In a household that observed purdah, the royal women needed a bathing place that was both dignified and screened from view. The solution was elegant — place the pavilion at the far edge of the estate pond, separated from the main palace by the water itself, with a ground-floor bathing chamber opening onto marble steps that descend into the pond, and an upper viewing deck for leisure."
+      },
+      {
+        "type": "paragraph",
+        "text": "There is even a legend attached to it. Local accounts say a hidden underground passage once connected the pavilion's bathing room to the main Muktagacha Rajbari some distance away. No modern survey has confirmed the tunnel, but the story tells you how deeply the building lives in local memory."
+      },
+      {
+        "type": "paragraph",
+        "text": "Today the setting has changed completely. The Shoshi Lodge grounds now serve as a Women's Teachers' Training College. The pond and pavilion are protected sites under the Department of Archaeology, Bangladesh — but protection on paper has not stopped the decay. Vegetation creeps into the brickwork, moisture seeps through the walls, plaster falls away, and fine cracks spread through the marble. The building is unoccupied and receives almost no regular maintenance."
+      },
+      {
+        "type": "paragraph",
+        "text": "That is exactly why this documentation project began. Before anyone can responsibly repair a heritage structure, someone has to record precisely what it is and what condition it is in. On 29 July 2025, that record was finally made — and over the next four posts I'll walk through what we found: the architecture, the 3D scanning technology, the damage, and what it will take to save it."
+      }
+    ]
+  },
+  {
+    "part": 2,
+    "title": "Reading the Architecture Brick, Marble, and a Cast-Iron Crown",
+    "standfirst": "Ranir Snanghat — The Queen's Bathing Pavilion of Shoshi Lodge · Part 2 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "The Ranir Snanghat is a small building, but it is designed with real sophistication. Stand in front of it and the first thing you notice is its strict symmetry: a two-storey façade facing south across the pond, organised on a classical tripartite plan — a central stair-and-portal bay flanked by equal bays on each side. The staircase projects well forward toward the water, so that seen from above the whole structure makes a cross shape."
+      },
+      {
+        "type": "paragraph",
+        "text": "Walk through it from bottom to top and you read the building like a sentence:"
+      },
+      {
+        "type": "paragraph",
+        "text": "The ground floor has four bays separated by pilaster strips with moulded capitals, each with a rectangular opening, finished in lime render over brick with a pale ochre wash — the original Zamindar palette. Below it, white marble ghat steps descend in two symmetrical flights to the pond, with ornamental newel posts at a central landing."
+      },
+      {
+        "type": "paragraph",
+        "text": "The first floor is set back slightly, creating a continuous walkway over the cornice below, enclosed by a cast-iron balustrade. Between the bay heads sit decorative ventilation panels — a clever Bengali device for managing tropical heat."
+      },
+      {
+        "type": "paragraph",
+        "text": "The roof crown is the showpiece: a continuous cast-iron balustrade of three interlocking circular rings set within pointed arches, producing a lace-like silhouette against the sky. It was almost certainly cast from pattern-book designs in a Calcutta foundry."
+      },
+      {
+        "type": "paragraph",
+        "text": "The staircase itself, rising in two flights with a broad mid-landing, has treads built for slow, ceremonial descent to the water — not for hurrying."
+      },
+      {
+        "type": "paragraph",
+        "text": "The materials tell their own story. The structure is load-bearing brick laid in a variant of English bond, finished in lime-surkhi plaster (slaked lime, ground fired brick, and sand). This historic render was actually superior to modern cement in a tropical climate: it breathes, letting moisture move through the wall instead of trapping it. The ghat and floors are regional marble, supplied through the Calcutta trade. The cast-iron railings still carry traces of their original finish — a deep bottle-green ground coat with gilt highlights, visible in sheltered corners."
+      },
+      {
+        "type": "paragraph",
+        "text": "One detail matters for everything that follows: later repairs patched the building with Portland cement, which does not breathe. That single well-meaning mistake traps moisture inside the walls and now drives much of the decay — a theme we'll return to in Part 4."
+      }
+    ]
+  },
+  {
+    "part": 3,
+    "title": "How We Scanned a Building With 876 Photographs",
+    "standfirst": "Ranir Snanghat — The Queen's Bathing Pavilion of Shoshi Lodge · Part 3 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "How do you make a permanent, scientific record of a building that may not survive the next decade? You don't just photograph it — you rebuild it as a measurable 3D model. The technique is called close-range photogrammetry, and it turns a set of ordinary overlapping photographs into accurate three-dimensional geometry."
+      },
+      {
+        "type": "paragraph",
+        "text": "On 29 July 2025, under overcast skies — which sounds gloomy but is actually ideal, because the soft, even light removes harsh shadows — the survey captured 876 images using two cameras working together:"
+      },
+      {
+        "type": "paragraph",
+        "text": "a Canon EOS 80D DSLR with a 10–18mm wide lens for detailed ground-level shots of the façade, and"
+      },
+      {
+        "type": "paragraph",
+        "text": "a drone-mounted (UAV) camera for the overhead and high-angle views you can't reach on foot."
+      },
+      {
+        "type": "paragraph",
+        "text": "Those photos went into Agisoft Metashape Professional, which works in stages. First it finds features that appear in multiple overlapping photos and uses them to calculate exactly where each camera was — the alignment step. Here the results were excellent: 873 of 876 images aligned (a 99.7% success rate), producing 919,623 tie points and a reprojection error of just 1.28 pixels — well within heritage-grade standards even around the difficult shadowed soffit under the stairs."
+      },
+      {
+        "type": "paragraph",
+        "text": "From there the software builds a dense mesh — a solid surface made of triangles. The final model contains a staggering 49,764,129 faces and 24,900,093 vertices, at a ground resolution of 0.579 mm per pixel. At that density, individual cast-iron baluster rings, moulded capitals, and stair nosings are each resolved separately. The mesh even revealed things invisible to the naked eye: a slight forward lean in the central stair railing and a subtle eastward tilt in the plinth, hinting at differential settlement."
+      },
+      {
+        "type": "paragraph",
+        "text": "Several outputs come from one survey. A height-coloured model maps elevation from blue at the pond bottom up to red at the 8.07-metre balustrade crown. A confidence map (blue = many overlapping views, red = few) honestly flags where the data is weakest — under the stair flights and at the restricted north corners. And the final textured model is published openly on Sketchfab, so anyone in the world can rotate and zoom into the pavilion without travelling to Mymensingh."
+      },
+      {
+        "type": "paragraph",
+        "text": "That is the real gift of this method: it produces a baseline so precise that future surveys can be compared against it, measuring decay over time down to fractions of a millimetre."
+      }
+    ]
+  },
+  {
+    "part": 4,
+    "title": "Mapping the Damage Eleven Zones From Critical to Stable",
+    "standfirst": "Ranir Snanghat — The Queen's Bathing Pavilion of Shoshi Lodge · Part 4 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A beautiful building can be quietly dying, and the only way to act responsibly is to say exactly where and how badly. So the survey divided the Ranir Snanghat into eleven zones, labelled A through K, and graded each one using a simple, internationally recognised colour system:"
+      },
+      {
+        "type": "paragraph",
+        "text": "🔴 RED — CRITICAL: immediate structural risk or irreversible loss imminent"
+      },
+      {
+        "type": "paragraph",
+        "text": "🟠 ORANGE — FRAGILE: active deterioration needing intervention within about a year"
+      },
+      {
+        "type": "paragraph",
+        "text": "🟡 YELLOW — STABLE: decay currently arrested; monitor only"
+      },
+      {
+        "type": "paragraph",
+        "text": "🟢 GREEN — GOOD"
+      },
+      {
+        "type": "paragraph",
+        "text": "Three zones came back CRITICAL (A, B, C):"
+      },
+      {
+        "type": "paragraph",
+        "text": "Zone A — east elevation, lower register. Here salt crystallisation is actively destroying both the plaster and the brick beneath it. Salts dissolved in moisture migrate to the surface, crystallise, and physically push the material apart. The trapped-moisture problem is made worse by those earlier Portland cement patches."
+      },
+      {
+        "type": "paragraph",
+        "text": "Zone B — roof-level balustrade, east wing. Sections of the ornamental cast-iron crown have come loose and shifted out of alignment, creating a genuine falling hazard."
+      },
+      {
+        "type": "paragraph",
+        "text": "Zone C — marble ghat steps, east flight. Several slabs have cracked through their full thickness and are at risk of sudden, catastrophic failure."
+      },
+      {
+        "type": "paragraph",
+        "text": "Five zones are FRAGILE (D–H): biological growth on the first-floor soffit, a crack in the central portal lintel that needs investigation to see if it's still moving, plus areas needing lime-render repair, metalwork consolidation, and controlled vegetation clearance. Three zones (I, J, K) are STABLE — fine for now, but they need watching."
+      },
+      {
+        "type": "paragraph",
+        "text": "The clever part is how the damage was recorded. The team used a dual system: a photo-annotated map, marking each defect on rectified photographs for evidence, and a schematic zone diagram that places the A–K labels onto a simple building outline for clarity. And there was a striking confirmation in the data: the low-confidence (red) areas of the 3D scan lined up almost exactly with the most physically deteriorated zones, because crumbling, disrupted surfaces are literally harder for the software to reconstruct. The geometry and the decay were telling the same story."
+      }
+    ]
+  },
+  {
+    "part": 5,
+    "title": "How to Save It Conservation Done Right",
+    "standfirst": "Ranir Snanghat — The Queen's Bathing Pavilion of Shoshi Lodge · Part 5 of 5",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Documentation is only the first half of the job. The second half is the harder question: what do you actually do to save the Ranir Snanghat? The recommendations here follow the international conservation charters — the Venice Charter (1964), the Nara Document on Authenticity (1994), and the Burra Charter (2013) — and they share one guiding principle: do no harm, and do nothing irreversible."
+      },
+      {
+        "type": "paragraph",
+        "text": "The single most important recommendation comes before any repair at all: commission a structural engineering survey of the foundation. The photogrammetry detected differential settlement — that slight eastward tilt — and no work on the superstructure should begin until the foundation's stability is confirmed."
+      },
+      {
+        "type": "paragraph",
+        "text": "After that, the work follows the zone priorities:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Critical Zone A (salt damage): remove every Portland cement patch (they trap moisture and feed the salt cycle), draw the salts out of the brick using attapulgite-clay poultices over a six-week-plus cycle, repoint joints with historically matched lime-surkhi mortar, then replace lime render in phases."
+      },
+      {
+        "type": "paragraph",
+        "text": "Critical Zone B (loose railing): install reversible stainless-steel ties immediately to remove the falling hazard, then later clean the corrosion, re-galvanise the iron, and cast replica balusters from surviving originals."
+      },
+      {
+        "type": "paragraph",
+        "text": "Critical Zone C (cracked marble): prop the cracked slabs now; replace the through-cracked ones with closely matched marble rather than attempting unreliable crack injection."
+      },
+      {
+        "type": "paragraph",
+        "text": "Fragile zones: treat biological growth with a biocide and gentle brushing, stabilise delaminating plaster with lime injection, and investigate the portal-lintel crack before any cosmetic repair."
+      },
+      {
+        "type": "paragraph",
+        "text": "There is also a clear list of don'ts: no herbicides within two metres of the masonry, no more cement, and no public entry until Zones A, B, and C are stabilised."
+      },
+      {
+        "type": "paragraph",
+        "text": "Beyond repair, the building needs better site management — manual vegetation clearance, a simple French drain on the east side to divert the runoff feeding Zone A, roof gutters, and bilingual interpretive signage so visitors understand the site without endangering it."
+      },
+      {
+        "type": "paragraph",
+        "text": "Here is the sobering truth that runs through the whole project. If the recommended interventions are not carried out with real urgency, this pavilion may not survive. But because of the survey, the 49.7-million-face digital model on Sketchfab now exists as a permanent record — one that could outlive the physical building itself. As the report puts it: the heritage of Bengal's Zamindars is a gift from the past to the future, and it is within our power, and our obligation, to make sure it survives the present."
+      }
+    ]
+  }
+]

@@ -236,9 +236,16 @@ Follows the v1/v2/v3 phasing, but the foundations come first regardless.
 Asset registry + loader + dedup cache · content schemas and validation · i18n routing · the `/dev/checks` and `/dev/scrub` harnesses · the layout shell and navigation.
 *Nothing visible ships, but everything after depends on it.*
 
-**Phase 1 — v1**
-Home (simple) · Heritage map + place panels · Research & Writing · About/Contact.
+**Phase 1 — v1** ✅ built
+Home (simple) · Heritage map + place panels · Exhibitions · Research & Writing · About/Contact.
 Needs almost nothing from Shourov — the tour links, DOIs and About copy already exist.
+
+What landed, and the two decisions taken during the build:
+
+- **Places carry latitude and longitude, not viewBox coordinates.** §2 of the design plan assumed pins were positioned in the map's own drawing space. That would have tied 27 pins to one particular outline, so redrawing the SVG would silently move every one of them off its site. Content now holds the real coordinate and `src/lib/map/projection.ts` projects it. The outline in `src/lib/map/outline.ts` is **hand-entered placeholder geometry** and is labelled as such on the page; replacing it with surveyed boundary data moves nothing but the outline.
+- **The narrative series are imported, not authored in the repo.** `scripts/import-series.mjs` reads the twenty .docx files from `../Research paper writer/` and commits them as block JSON under `content/series/`. The build never touches that folder. Blocks rather than MDX means no markdown parser at runtime, no new dependency, and no prose passing through `dangerouslySetInnerHTML`.
+
+Also built, beyond the stated scope because they were cheap once the content model existed: `sitemap.xml` and `robots.txt` from the same content the pages use, and `scripts/check-weights.mjs`, which measures the brotli-compressed first load of every route shape against the 500 KB budget and **fails the build** rather than warning. Photography and Commercial ship as honest stubs — the navigation is the site's map, and a tab that appears later reads as a site that was incomplete.
 
 **Phase 2 — v2**
 Photography (5 segments, the Paharpur bridge) · Commercial (index, client pages, video pipeline) · Paharpur mesh↔splat comparison.

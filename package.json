@@ -4,24 +4,30 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run validate && next build",
+    "build": "npm run validate && next build && npm run weights",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "validate": "node --import tsx scripts/validate-content.mjs",
+    "weights": "node scripts/check-weights.mjs",
+    "import-series": "node scripts/import-series.mjs",
     "check": "npm run typecheck && npm run lint && npm run validate"
   },
   "dependencies": {
+    "@sparkjsdev/spark": "2.1.0",
     "next": "16.2.12",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "three": "0.185.1",
     "zod": "4.4.3"
   },
   "devDependencies": {
+    "@playcanvas/splat-transform": "3.2.0",
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "20.19.43",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
+    "@types/three": "0.185.0",
     "eslint": "9.39.5",
     "eslint-config-next": "16.2.12",
     "tailwindcss": "4.3.3",

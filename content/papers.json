@@ -1,27 +1,66 @@
 [
   {
-    "slug": "banteay-samre-bakong",
-    "title": "Reconstructing Angkor Temples from Unstructured Found Footage: A 3D Gaussian Splatting Workflow Tested on Banteay Samré and Bakong, Angkor, Cambodia",
-    "kind": "report",
-    "doi": "10.5281/zenodo.21741175",
-    "publishedAt": "2026-08-01",
-    "pdfUrl": "https://zenodo.org/records/21741175"
-  },
-  {
     "slug": "ranir-snanghat",
     "title": "Close-Range Photogrammetric Documentation and Condition Assessment of the Ranir Snanghat, a Nineteenth-Century Zamindar Bathing Pavilion at Shoshi Lodge, Mymensingh, Bangladesh",
+    "shortTitle": "The Ranir Snanghat, Shoshi Lodge",
     "kind": "preprint",
     "doi": "10.5281/zenodo.21744242",
     "publishedAt": "2026-08-01",
     "pdfUrl": "https://zenodo.org/records/21744242",
-    "relatedPlace": "shashi-lodge"
+    "licence": "CC BY 4.0",
+    "summary": "A two-storey marble bathing pavilion at the edge of an estate pond, recorded in a single day and assessed zone by zone. The survey found differential settlement — the building is moving.",
+    "subjectLabel": "Ranir Snanghat — photogrammetric mesh, 49.7 million faces",
+    "relatedPlace": "shashi-lodge",
+    "series": "ranir-snanghat",
+    "figures": [
+      { "label": "Survey date", "value": "29 July 2025" },
+      { "label": "Images", "value": "876" },
+      { "label": "Systems", "value": "Canon EOS 80D with EF-S 10–18 mm, and a UAV" },
+      { "label": "Mesh", "value": "49.7 million faces" },
+      { "label": "DEM resolution", "value": "2.36 mm/px" },
+      { "label": "Measured height", "value": "8.07 m" },
+      { "label": "Damage zones", "value": "11, critical to stable" }
+    ]
   },
   {
     "slug": "vishnu-stele",
     "title": "A Photogrammetric Documentation and Condition Assessment of a Pala-Period Vishnu Stele in the Varendra Research Museum, Rajshahi: A Preliminary Report",
+    "shortTitle": "A Pala-period Vishnu stele, Rajshahi",
     "kind": "preprint",
     "doi": "10.5281/zenodo.21744327",
     "publishedAt": "2026-08-01",
-    "pdfUrl": "https://zenodo.org/records/21744327"
+    "pdfUrl": "https://zenodo.org/records/21744327",
+    "licence": "CC BY 4.0",
+    "summary": "A thousand-year-old black stone stele found lying on burlap on an open veranda, exposed to sun and rain, with no label. The report is an iconographic reading, a damage catalogue, and a conservation emergency.",
+    "subjectModelUrl": "https://sketchfab.com/3d-models/varendra-musume-2-476514c5123940cd88d6b91d544e7da8",
+    "subjectLabel": "Vishnu stele — photogrammetric mesh, 3,562,081 faces",
+    "relatedPlace": "varendra-research-museum",
+    "series": "vishnu-stele",
+    "figures": [
+      { "label": "Mesh", "value": "3,562,081 faces" },
+      { "label": "Material", "value": "Phyllite or chlorite schist" },
+      { "label": "Period", "value": "Pala" },
+      { "label": "Sections", "value": "12" },
+      { "label": "Figures", "value": "17" }
+    ]
+  },
+  {
+    "slug": "banteay-samre-bakong",
+    "title": "Reconstructing Angkor Temples from Unstructured Found Footage: A 3D Gaussian Splatting Workflow Tested on Banteay Samré and Bakong, Angkor, Cambodia",
+    "shortTitle": "Angkor from found footage",
+    "kind": "report",
+    "doi": "10.5281/zenodo.21741175",
+    "publishedAt": "2026-08-01",
+    "pdfUrl": "https://zenodo.org/records/21741175",
+    "licence": "CC BY 4.0",
+    "summary": "Two Angkor temples reconstructed from a single publicly available video each — no site visit, no capture plan. A proof of concept for the case where photogrammetry's feature matching fails and Gaussian splatting does not.",
+    "subjectLabel": "Banteay Samré and Bakong — Gaussian splats",
+    "figures": [
+      { "label": "Source", "value": "One public video per temple" },
+      { "label": "Frames, Banteay Samré", "value": "639, extracted at 1 fps" },
+      { "label": "Frames, Bakong", "value": "844, extracted at 1 fps" },
+      { "label": "Trained in", "value": "Jawset Postshot" },
+      { "label": "Stated limit", "value": "No metric geometry, no clean mesh" }
+    ]
   }
 ]

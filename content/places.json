@@ -1,0 +1,616 @@
+[
+  {
+    "slug": "somapura-mahavihara",
+    "name": { "bn": "সোমপুর মহাবিহার, পাহাড়পুর", "en": "Somapura Mahavihara, Paharpur" },
+    "district": { "bn": "নওগাঁ", "en": "Naogaon" },
+    "lat": 25.031,
+    "lng": 88.977,
+    "kind": "archaeological",
+    "period": "8th century",
+    "featured": true,
+    "summary": {
+      "bn": "দক্ষিণ এশিয়ার বৃহত্তম বৌদ্ধ বিহার এবং ইউনেস্কো বিশ্ব ঐতিহ্যের স্থান। এখানকার কাজ তিনটি আলাদা প্রজন্মের প্রযুক্তিতে ধরা আছে — একটি ৩৬০° ট্যুর, ২০২৩ সালের ফটোগ্রামেট্রিক মেশ, আর ২০২৫ সালের গাউসিয়ান স্প্ল্যাট।",
+      "en": "The largest Buddhist monastery in South Asia, and a UNESCO World Heritage Site. It is held here in three separate generations of technique — a 360° tour, a 2023 photogrammetric mesh, and a 2025 Gaussian splat."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/SompuraMahavira_WEB/",
+        "counts": { "panoramas": 203, "hotspots": 10244 },
+        "note": "Published on the Bangladesh Tourism Board's national portal. 203 panoramas — the largest tour in the set."
+      },
+      {
+        "kind": "mesh",
+        "label": { "bn": "ফটোগ্রামেট্রিক মেশ (২০২৩)", "en": "Photogrammetric mesh (2023)" },
+        "status": "pending",
+        "note": "Agisoft Metashape reconstruction. Held; not yet processed for the web."
+      },
+      {
+        "kind": "splat",
+        "label": { "bn": "গাউসিয়ান স্প্ল্যাট (২০২৫)", "en": "Gaussian splat (2025)" },
+        "status": "pending",
+        "note": "Held; not yet processed for the web."
+      },
+      {
+        "kind": "comparison",
+        "label": { "bn": "মেশ ও স্প্ল্যাট পাশাপাশি", "en": "Mesh and splat, side by side" },
+        "status": "pending",
+        "note": "The same site three years apart, in one camera and two viewports. Needs the two reconstructions registered into one coordinate space first."
+      }
+    ]
+  },
+  {
+    "slug": "shashi-lodge",
+    "name": { "bn": "শশী লজ", "en": "Shashi Lodge" },
+    "district": { "bn": "ময়মনসিংহ", "en": "Mymensingh" },
+    "lat": 24.751,
+    "lng": 90.402,
+    "kind": "zamindar-palace",
+    "period": "late 19th century",
+    "featured": true,
+    "summary": {
+      "bn": "মুক্তাগাছা জমিদার পরিবারের শহুরে প্রাসাদ। একটি জায়গা, তিনটি আলাদা রেকর্ড — একটি ৩৬০° ট্যুর, ধ্বংস হয়ে যাওয়া ভেনাস মূর্তির একমাত্র জানা ত্রিমাত্রিক রেকর্ড, আর রানির স্নানঘাট নিয়ে ডিওআই-সহ একটি প্রকাশিত জরিপ।",
+      "en": "The urban palace of the Muktagacha zamindar family. One place, three separate records — a 360° tour, the only known three-dimensional record of the Venus statue that stood in front of it, and a published photogrammetric survey of the Ranir Snanghat with a DOI."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/Shashi-Lodge/",
+        "counts": { "panoramas": 27, "hotspots": 987 },
+        "note": "Captured before August 2024, so the Venus statue is visible in it, standing in place."
+      },
+      {
+        "kind": "mesh",
+        "label": { "bn": "ভেনাস মূর্তি — ফটোগ্রামেট্রিক রেকর্ড", "en": "The Venus statue — photogrammetric record" },
+        "href": "https://sketchfab.com/3d-models/soshi-56ca07726b924143a2be415bc3721d57",
+        "capturedAt": "2023-07-22",
+        "note": "The statue was destroyed by vandals after 5 August 2024. This is the only known three-dimensional record of it."
+      },
+      {
+        "kind": "paper",
+        "label": { "bn": "রানির স্নানঘাট — প্রকাশিত জরিপ", "en": "Ranir Snanghat — published survey" },
+        "href": "https://zenodo.org/records/21744242",
+        "capturedAt": "2025-07-29",
+        "note": "876 images, a 49.7-million-face mesh, and a full condition assessment. Preprint, DOI 10.5281/zenodo.21744242."
+      }
+    ]
+  },
+  {
+    "slug": "rangkut-banasram",
+    "name": { "bn": "রাংকুট বনাশ্রম বৌদ্ধ বিহার", "en": "Rangkut Banasram Buddhist Monastery" },
+    "district": { "bn": "কক্সবাজার", "en": "Cox's Bazar" },
+    "lat": 21.42,
+    "lng": 92.1,
+    "kind": "archaeological",
+    "featured": true,
+    "summary": {
+      "bn": "রামুর পাহাড়ের ওপর একটি প্রাচীন বৌদ্ধ বিহার। ট্যুরের পাশাপাশি এখানকার বুদ্ধমূর্তি ও ঘণ্টা আলাদা করে স্ক্যান করা আছে।",
+      "en": "An ancient Buddhist monastery on a hill at Ramu. Beyond the tour, the Buddha figure and the monastery bell are each held as separate scans."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/Rangkut_WEB/"
+      },
+      {
+        "kind": "splat",
+        "label": { "bn": "গাউসিয়ান স্প্ল্যাট", "en": "Gaussian splat" },
+        "status": "pending"
+      },
+      {
+        "kind": "mesh",
+        "label": { "bn": "ঘণ্টা — ফটোগ্রামেট্রিক মেশ", "en": "The bell — photogrammetric mesh" },
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "slug": "lalbagh-fort",
+    "name": { "bn": "লালবাগ কেল্লা", "en": "Lalbagh Fort" },
+    "district": { "bn": "ঢাকা", "en": "Dhaka" },
+    "lat": 23.719,
+    "lng": 90.388,
+    "kind": "archaeological",
+    "period": "17th century",
+    "featured": true,
+    "summary": {
+      "bn": "ঢাকার অসমাপ্ত মুঘল কেল্লা। ট্যুরের সঙ্গে পরীবিবির সমাধির আলাদা স্ক্যান।",
+      "en": "Dhaka's unfinished Mughal fort. The tour is accompanied by separate scans of Pari Bibi's tomb."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/Lalbagh-Fort/"
+      },
+      {
+        "kind": "mesh",
+        "label": { "bn": "পরীবিবির সমাধি — মেশ", "en": "Pari Bibi's tomb — mesh" },
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "slug": "kusumba-mosque",
+    "name": { "bn": "কুসুম্বা মসজিদ", "en": "Kusumba Mosque" },
+    "district": { "bn": "নওগাঁ", "en": "Naogaon" },
+    "lat": 24.718,
+    "lng": 88.533,
+    "kind": "mosque",
+    "period": "1558",
+    "summary": {
+      "bn": "সুলতানি আমলের পাথরে গড়া মসজিদ, খোদাই করা মিহরাবের জন্য পরিচিত।",
+      "en": "A stone-built mosque of the Sultanate period, known for its carved mihrabs."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/kusumba-mosque/"
+      },
+      {
+        "kind": "splat",
+        "label": { "bn": "গাউসিয়ান স্প্ল্যাট", "en": "Gaussian splat" },
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "slug": "mujibnagar-memorial",
+    "name": { "bn": "মুজিবনগর স্মৃতিসৌধ", "en": "Mujibnagar Memorial" },
+    "district": { "bn": "মেহেরপুর", "en": "Meherpur" },
+    "lat": 23.64,
+    "lng": 88.63,
+    "kind": "national-memory",
+    "period": "1971",
+    "summary": {
+      "bn": "যেখানে ১৯৭১ সালে বাংলাদেশের প্রথম সরকার শপথ নিয়েছিল। ট্যুরের সঙ্গে স্মারক ভাস্কর্যের চারটি আলাদা স্ক্যান।",
+      "en": "Where the first government of Bangladesh was sworn in, in 1971. The tour is accompanied by four separate scans of the memorial sculpture."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/MeherpurMujibnagarSmritiSaudha_WEB/"
+      },
+      {
+        "kind": "mesh",
+        "label": { "bn": "স্মারক ভাস্কর্য — চারটি মেশ", "en": "Memorial sculpture — four meshes" },
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "slug": "mahasthangarh",
+    "name": { "bn": "মহাস্থানগড়", "en": "Mahasthangarh" },
+    "district": { "bn": "বগুড়া", "en": "Bogura" },
+    "lat": 24.967,
+    "lng": 89.34,
+    "kind": "archaeological",
+    "period": "3rd century BCE",
+    "summary": {
+      "bn": "বাংলাদেশে খুঁজে পাওয়া প্রাচীনতম নগরকেন্দ্র — পুণ্ড্রনগরের ধ্বংসাবশেষ।",
+      "en": "The earliest urban site found in Bangladesh — the remains of Pundranagara."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/Mahasthangarh/"
+      }
+    ]
+  },
+  {
+    "slug": "puthia-rajbari",
+    "name": { "bn": "পুঠিয়া রাজবাড়ি", "en": "Puthia Rajbari" },
+    "district": { "bn": "রাজশাহী", "en": "Rajshahi" },
+    "lat": 24.369,
+    "lng": 88.833,
+    "kind": "zamindar-palace",
+    "period": "1895",
+    "summary": {
+      "bn": "রাজবাড়ি আর তাকে ঘিরে থাকা টেরাকোটা মন্দিরগুলো — দেশের সবচেয়ে ঘন ঐতিহাসিক স্থাপনার গুচ্ছ।",
+      "en": "The palace and the terracotta temples around it — the densest cluster of historic structures in the country."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/PuthiaRajbari_WEB/"
+      }
+    ]
+  },
+  {
+    "slug": "natore-rajbari",
+    "name": { "bn": "নাটোর রাজবাড়ি", "en": "Natore Rajbari" },
+    "district": { "bn": "নাটোর", "en": "Natore" },
+    "lat": 24.42,
+    "lng": 88.98,
+    "kind": "zamindar-palace",
+    "period": "18th century",
+    "summary": {
+      "bn": "রানি ভবানীর রাজবাড়ি — পরিখা-ঘেরা প্রাসাদ ও মন্দিরের চত্বর।",
+      "en": "Rani Bhabani's palace — a moated compound of residences and temples."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/NatoreRajbari_WEB/"
+      }
+    ]
+  },
+  {
+    "slug": "choto-sona-mosque",
+    "name": { "bn": "ছোট সোনা মসজিদ", "en": "Choto Sona Mosque" },
+    "district": { "bn": "চাঁপাইনবাবগঞ্জ", "en": "Chapainawabganj" },
+    "lat": 24.867,
+    "lng": 88.137,
+    "kind": "mosque",
+    "period": "early 16th century",
+    "summary": {
+      "bn": "গৌড়ের সুলতানি স্থাপত্যের অন্যতম নিদর্শন, এক সময় গম্বুজগুলো সোনালি করে ঢাকা ছিল।",
+      "en": "A Sultanate mosque of the Gauda region, its domes once gilded."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/choto-sona-mosque/"
+      }
+    ]
+  },
+  {
+    "slug": "bagha-mosque",
+    "name": { "bn": "বাঘা মসজিদ", "en": "Bagha Mosque" },
+    "district": { "bn": "রাজশাহী", "en": "Rajshahi" },
+    "lat": 24.2,
+    "lng": 88.83,
+    "kind": "mosque",
+    "period": "1523",
+    "summary": {
+      "bn": "টেরাকোটা অলংকরণে ঢাকা সুলতানি মসজিদ, একটি বড় দিঘির পাড়ে।",
+      "en": "A Sultanate mosque covered in terracotta ornament, beside a large tank."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/bagha-mosque/"
+      }
+    ]
+  },
+  {
+    "slug": "adinath-temple",
+    "name": { "bn": "আদিনাথ মন্দির", "en": "Adinath Temple" },
+    "district": { "bn": "কক্সবাজার", "en": "Cox's Bazar" },
+    "lat": 21.58,
+    "lng": 91.97,
+    "kind": "archaeological",
+    "summary": {
+      "bn": "মহেশখালীর মৈনাক পাহাড়ের চূড়ায় শিব মন্দির।",
+      "en": "A Shiva temple on the crest of Mainak hill, Maheshkhali."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/adinath-temple/"
+      }
+    ]
+  },
+  {
+    "slug": "patisar-rabindra-kachharibari",
+    "name": { "bn": "পতিসর রবীন্দ্র কাছারিবাড়ি", "en": "Patisar Rabindra Kachharibari" },
+    "district": { "bn": "নওগাঁ", "en": "Naogaon" },
+    "lat": 24.55,
+    "lng": 89.05,
+    "kind": "literary",
+    "summary": {
+      "bn": "রবীন্দ্রনাথ ঠাকুরের জমিদারি কাছারি — যেখান থেকে তিনি ঠাকুর পরিবারের নাগর নদীর তীরের সম্পত্তি দেখাশোনা করতেন।",
+      "en": "Rabindranath Tagore's estate office, from which he managed the family's holdings on the Nagar river."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/patisar-rabindra-kachari-bari/"
+      }
+    ]
+  },
+  {
+    "slug": "muktagacha-zamindar-bari",
+    "name": { "bn": "মুক্তাগাছা জমিদার বাড়ি", "en": "Muktagacha Zamindar Bari" },
+    "district": { "bn": "ময়মনসিংহ", "en": "Mymensingh" },
+    "lat": 24.77,
+    "lng": 90.25,
+    "kind": "zamindar-palace",
+    "period": "18th–19th century",
+    "summary": {
+      "bn": "যে জমিদার পরিবারের পৃষ্ঠপোষকতায় শশী লজ ও রানির স্নানঘাট গড়ে উঠেছিল, এটি তাদের মূল বাড়ি।",
+      "en": "The seat of the zamindar family whose patronage built Shashi Lodge and the Ranir Snanghat."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/muktagacha-zamidar-bari/"
+      }
+    ]
+  },
+  {
+    "slug": "saint-martins-island",
+    "name": { "bn": "সেন্ট মার্টিন দ্বীপ", "en": "Saint Martin's Island" },
+    "district": { "bn": "কক্সবাজার", "en": "Cox's Bazar" },
+    "lat": 20.627,
+    "lng": 92.322,
+    "kind": "nature",
+    "summary": {
+      "bn": "দেশের একমাত্র প্রবাল দ্বীপ, বঙ্গোপসাগরের দক্ষিণতম বিন্দু।",
+      "en": "The country's only coral island, and its southernmost point."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/saint-martin/"
+      }
+    ]
+  },
+  {
+    "slug": "sonadia-island",
+    "name": { "bn": "সোনাদিয়া দ্বীপ", "en": "Sonadia Island" },
+    "district": { "bn": "কক্সবাজার", "en": "Cox's Bazar" },
+    "lat": 21.5,
+    "lng": 91.88,
+    "kind": "nature",
+    "summary": {
+      "bn": "প্যারাবন ও পরিযায়ী পাখির জন্য পরিচিত একটি নির্জন দ্বীপ।",
+      "en": "An uninhabited island known for its mangrove and migratory birds."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/sonadia-Island/"
+      }
+    ]
+  },
+  {
+    "slug": "inani-beach",
+    "name": { "bn": "ইনানী সৈকত", "en": "Inani Beach" },
+    "district": { "bn": "কক্সবাজার", "en": "Cox's Bazar" },
+    "lat": 21.22,
+    "lng": 92.05,
+    "kind": "nature",
+    "summary": {
+      "bn": "প্রবাল পাথরে ছড়ানো সৈকত, মেরিন ড্রাইভ ধরে।",
+      "en": "A beach strewn with coral boulders, along the marine drive."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/inani-beach/"
+      }
+    ]
+  },
+  {
+    "slug": "laboni-beach",
+    "name": { "bn": "লাবণী সৈকত", "en": "Laboni Beach" },
+    "district": { "bn": "কক্সবাজার", "en": "Cox's Bazar" },
+    "lat": 21.427,
+    "lng": 91.98,
+    "kind": "nature",
+    "summary": {
+      "bn": "কক্সবাজার শহরের প্রধান সৈকত পয়েন্ট।",
+      "en": "The main beach point of Cox's Bazar town."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/laboni-beach/"
+      }
+    ]
+  },
+  {
+    "slug": "himchari-national-park",
+    "name": { "bn": "হিমছড়ি জাতীয় উদ্যান", "en": "Himchari National Park" },
+    "district": { "bn": "কক্সবাজার", "en": "Cox's Bazar" },
+    "lat": 21.35,
+    "lng": 92.03,
+    "kind": "nature",
+    "summary": {
+      "bn": "সমুদ্রের ধারে পাহাড় ও ঝরনা নিয়ে গড়া জাতীয় উদ্যান।",
+      "en": "A national park of hills and waterfalls running down to the sea."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/himchari-national-park/"
+      }
+    ]
+  },
+  {
+    "slug": "bangabandhu-safari-park",
+    "name": { "bn": "বঙ্গবন্ধু শেখ মুজিব সাফারি পার্ক", "en": "Bangabandhu Sheikh Mujib Safari Park" },
+    "district": { "bn": "কক্সবাজার", "en": "Cox's Bazar" },
+    "lat": 21.65,
+    "lng": 92.05,
+    "kind": "nature",
+    "summary": {
+      "bn": "ডুলাহাজারার সাফারি পার্ক, চকরিয়া।",
+      "en": "The safari park at Dulahazara, Chakaria."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/BangabandhuSafariPark/"
+      }
+    ]
+  },
+  {
+    "slug": "karamjal",
+    "name": { "bn": "করমজল", "en": "Karamjal" },
+    "district": { "bn": "বাগেরহাট", "en": "Bagerhat" },
+    "lat": 22.4,
+    "lng": 89.58,
+    "kind": "nature",
+    "summary": {
+      "bn": "সুন্দরবনের প্রবেশদ্বার — কুমির ও হরিণ প্রজনন কেন্দ্র।",
+      "en": "The gateway to the Sundarbans — a crocodile and deer breeding centre."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://vtour.beautifulbangladesh.gov.bd/virtualtour/Karamjal/"
+      }
+    ]
+  },
+  {
+    "slug": "varendra-research-museum",
+    "name": { "bn": "বরেন্দ্র গবেষণা জাদুঘর", "en": "Varendra Research Museum" },
+    "district": { "bn": "রাজশাহী", "en": "Rajshahi" },
+    "lat": 24.367,
+    "lng": 88.604,
+    "kind": "museum",
+    "period": "founded 1910",
+    "featured": true,
+    "summary": {
+      "bn": "বাংলাদেশের প্রাচীনতম জাদুঘর। এখানকার একটি পাল-যুগের বিষ্ণু স্তেল নিয়ে করা জরিপ ডিওআই-সহ প্রকাশিত — খোলা বারান্দায় রোদ-বৃষ্টিতে পড়ে থাকা অবস্থায় বস্তুটি নথিভুক্ত করা হয়েছিল।",
+      "en": "The oldest museum in Bangladesh. A Pala-period Vishnu stele from its collection is the subject of a published survey with a DOI — recorded where it lay, on an open veranda, exposed to sun and rain."
+    },
+    "formats": [
+      {
+        "kind": "mesh",
+        "label": { "bn": "বিষ্ণু স্তেল — ফটোগ্রামেট্রিক মেশ", "en": "Vishnu stele — photogrammetric mesh" },
+        "href": "https://sketchfab.com/3d-models/varendra-musume-2-476514c5123940cd88d6b91d544e7da8",
+        "note": "3.5 million faces. The object the Vishnu stele paper analyses."
+      },
+      {
+        "kind": "paper",
+        "label": { "bn": "প্রকাশিত জরিপ", "en": "Published survey" },
+        "href": "https://zenodo.org/records/21744327",
+        "note": "Preprint, DOI 10.5281/zenodo.21744327. Includes a damage-zone catalogue and conservation recommendations."
+      },
+      {
+        "kind": "mesh",
+        "label": { "bn": "সংগ্রহের অন্যান্য বস্তু", "en": "Further objects from the collection" },
+        "status": "pending",
+        "note": "A series of scans from the same collection. Held; object metadata not yet written down."
+      }
+    ]
+  },
+  {
+    "slug": "armenian-church",
+    "name": { "bn": "আর্মেনীয় গির্জা, আরমানিটোলা", "en": "Armenian Church, Armanitola" },
+    "district": { "bn": "ঢাকা", "en": "Dhaka" },
+    "lat": 23.711,
+    "lng": 90.409,
+    "kind": "civic",
+    "period": "1781",
+    "summary": {
+      "bn": "পুরান ঢাকার আর্মেনীয় বণিক সম্প্রদায়ের গির্জা ও সমাধিক্ষেত্র।",
+      "en": "The church and burial ground of Old Dhaka's Armenian merchant community."
+    },
+    "formats": [
+      {
+        "kind": "tour",
+        "label": { "bn": "৩৬০° ভার্চুয়াল ট্যুর", "en": "360° virtual tour" },
+        "href": "https://virtualtour.keerticreations.com/"
+      },
+      {
+        "kind": "mesh",
+        "label": { "bn": "সমাধি ভাস্কর্য — মেশ", "en": "Grave sculpture — mesh" },
+        "status": "pending",
+        "note": "Including the grave statue of Catachik Avatik Thomas."
+      }
+    ]
+  },
+  {
+    "slug": "national-parliament-house",
+    "name": { "bn": "জাতীয় সংসদ ভবন", "en": "National Parliament House" },
+    "district": { "bn": "ঢাকা", "en": "Dhaka" },
+    "lat": 23.762,
+    "lng": 90.378,
+    "kind": "civic",
+    "period": "1982",
+    "summary": {
+      "bn": "লুই কানের নকশা করা সংসদ ভবন, আকাশ থেকে ধারণ করা।",
+      "en": "Louis Kahn's parliament building, captured from the air."
+    },
+    "formats": [
+      {
+        "kind": "splat",
+        "label": { "bn": "আকাশ থেকে গাউসিয়ান স্প্ল্যাট", "en": "Aerial Gaussian splat" },
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "slug": "sixty-dome-mosque",
+    "name": { "bn": "ষাট গম্বুজ মসজিদ", "en": "Sixty Dome Mosque" },
+    "district": { "bn": "বাগেরহাট", "en": "Bagerhat" },
+    "lat": 22.674,
+    "lng": 89.741,
+    "kind": "mosque",
+    "period": "15th century",
+    "summary": {
+      "bn": "খান জাহান আলীর গড়া মসজিদ শহরের প্রধান স্থাপনা, ইউনেস্কো বিশ্ব ঐতিহ্যের স্থান।",
+      "en": "The principal structure of Khan Jahan Ali's mosque city, a UNESCO World Heritage Site."
+    },
+    "formats": [
+      {
+        "kind": "mesh",
+        "label": { "bn": "ফটোগ্রামেট্রিক মেশ", "en": "Photogrammetric mesh" },
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "slug": "central-shaheed-minar",
+    "name": { "bn": "কেন্দ্রীয় শহীদ মিনার", "en": "Central Shaheed Minar" },
+    "district": { "bn": "ঢাকা", "en": "Dhaka" },
+    "lat": 23.728,
+    "lng": 90.398,
+    "kind": "national-memory",
+    "period": "1963",
+    "summary": {
+      "bn": "১৯৫২ সালের ভাষা আন্দোলনের শহীদদের স্মৃতিস্তম্ভ।",
+      "en": "The monument to those killed in the language movement of 1952."
+    },
+    "formats": [
+      {
+        "kind": "mesh",
+        "label": { "bn": "ফটোগ্রামেট্রিক মেশ", "en": "Photogrammetric mesh" },
+        "status": "pending"
+      }
+    ]
+  },
+  {
+    "slug": "matiranga",
+    "name": { "bn": "মাটিরাঙ্গা", "en": "Matiranga" },
+    "district": { "bn": "খাগড়াছড়ি", "en": "Khagrachhari" },
+    "lat": 23.05,
+    "lng": 91.85,
+    "kind": "nature",
+    "summary": {
+      "bn": "পার্বত্য চট্টগ্রামের ভূমিরূপ — কোনো স্থাপনা নয়, ভূখণ্ড নিজেই। এই সাইটের একমাত্র রেকর্ড যা কেউ বানায়নি।",
+      "en": "Terrain in the Chittagong Hill Tracts — not a structure but the land itself. The only record here of something nobody built."
+    },
+    "formats": [
+      {
+        "kind": "splat",
+        "label": { "bn": "ভূমিরূপের স্প্ল্যাট", "en": "Terrain splat" },
+        "status": "pending"
+      }
+    ]
+  }
+]

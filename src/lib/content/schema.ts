@@ -13,6 +13,17 @@ import { z } from "zod";
  * object. Long-form prose lives in separate per-language MDX files instead.
  */
 
+/**
+ * The two languages.
+ *
+ * The interface is English; long-form content is bilingual with a per-article
+ * toggle. Bengali goes where it matters — the stories about Bangladeshi
+ * heritage, written for Bangladeshi readers — rather than onto navigation
+ * labels. See docs/DESIGN_PLAN.md §10.
+ */
+export const Language = z.enum(["en", "bn"]);
+export type Language = z.infer<typeof Language>;
+
 /** A label that exists in both languages. */
 export const Bilingual = z.object({
   bn: z.string().min(1),
@@ -68,22 +79,62 @@ export type Sculpture = z.infer<typeof Sculpture>;
 
 /** What we hold for a place, beyond the tour itself. */
 export const PlaceFormat = z.object({
-  kind: z.enum(["tour", "mesh", "splat", "photographs", "comparison"]),
+  kind: z.enum(["tour", "mesh", "splat", "photographs", "comparison", "paper"]),
   label: Bilingual,
-  /** External tours link out; everything else resolves through the registry. */
+  /** External tours and papers link out; models resolve through the registry. */
   href: z.string().url().optional(),
   asset: AssetId.optional(),
   capturedAt: z.string().date().optional(),
+  /** Panorama and hotspot counts, where a tour's scale is worth stating. */
+  counts: z
+    .object({
+      panoramas: z.number().int().positive().optional(),
+      hotspots: z.number().int().positive().optional(),
+    })
+    .optional(),
+  /** One line, only where the format needs explaining. */
+  note: z.string().max(240).optional(),
+  /**
+   * `pending` means the record exists but is not on this site yet — the
+   * capture is held, the asset pipeline has not run. The panel shows it as
+   * held-not-published rather than pretending it is missing, because the
+   * count of formats is what pin weight encodes.
+   */
+  status: z.enum(["live", "pending"]).default("live"),
 });
+export type PlaceFormat = z.infer<typeof PlaceFormat>;
+
+/** Filters the map offers. Kept small; a filter per place is not a filter. */
+export const PlaceKind = z.enum([
+  "archaeological",
+  "mosque",
+  "zamindar-palace",
+  "literary",
+  "national-memory",
+  "nature",
+  "museum",
+  "civic",
+]);
+export type PlaceKind = z.infer<typeof PlaceKind>;
 
 /** A pin on the map. */
 export const Place = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   name: Bilingual,
   district: Bilingual,
-  /** Position on the custom SVG map, in its own viewBox units — not lat/lng. */
-  x: z.number(),
-  y: z.number(),
+  /**
+   * Real coordinates, not viewBox units.
+   *
+   * The plan originally stored positions in the map's own coordinate space,
+   * which would have pinned every place to one particular drawing of the
+   * country — redrawing the SVG would silently move all twenty-odd pins off
+   * their sites. Latitude and longitude are the verifiable fact; the map
+   * projects them (src/lib/map/projection.ts), so the outline can be
+   * replaced without touching content.
+   */
+  lat: z.number().min(20).max(27),
+  lng: z.number().min(87).max(93),
+  kind: PlaceKind,
   period: z.string().optional(),
   summary: Bilingual,
   formats: z.array(PlaceFormat).min(1),
@@ -115,6 +166,31 @@ export const Exhibition = z.object({
       halls: z.number().int().positive().optional(),
     })
     .optional(),
+  /** One paragraph on what it was. English only until the Bengali is written. */
+  summary: z.string().min(1),
+  /** What he built for it, in the exhibition's own terms. */
+  contribution: z.string().optional(),
+  /**
+   * Where the claim can be checked from outside this site. The site's whole
+   * argument is verifiability, so an exhibition with no external evidence
+   * says so rather than quietly reading like the others.
+   */
+  evidence: z
+    .array(
+      z.object({
+        label: z.string().min(1),
+        /**
+         * Omitted where the source is real but has no stable URL to hand.
+         * A citation without a link is honest; a guessed link is not, and on
+         * a site whose whole argument is verifiability a dead or invented
+         * href does more damage than no href at all.
+         */
+        href: z.string().url().optional(),
+      }),
+    )
+    .default([]),
+  /** Set when there is nothing external to point at, and say why. */
+  evidenceNote: z.string().optional(),
 });
 export type Exhibition = z.infer<typeof Exhibition>;
 
@@ -178,15 +254,62 @@ export type Client = z.infer<typeof Client>;
 export const Paper = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   title: z.string().min(1),
+  /** For the index and page heading, where the full title is unreadable. */
+  shortTitle: z.string().min(1),
   kind: z.enum(["preprint", "report", "peer-reviewed"]),
   doi: z.string().regex(/^10\.\d{4,9}\/\S+$/),
   publishedAt: z.string().date(),
   pdfUrl: z.string().url(),
+  licence: z.string().default("CC BY 4.0"),
+  /** Plain-language line for the index. Not the paper's own abstract. */
+  summary: z.string().min(1),
   /** The object the paper is about, so the reader can rotate it. */
   subjectAsset: AssetId.optional(),
+  /**
+   * Where the model can be seen today. The site will host its own once the
+   * asset pipeline runs; until then this is the honest link.
+   */
+  subjectModelUrl: z.string().url().optional(),
+  /** What the model is, in one line — shown beside the viewer. */
+  subjectLabel: z.string().optional(),
   relatedPlace: z.string().optional(),
+  /** Slug of the narrative series in content/series/, when one exists. */
+  series: z.string().regex(/^[a-z0-9-]+$/).optional(),
+  /** Numbers worth stating plainly: image counts, mesh size, resolutions. */
+  figures: z
+    .array(z.object({ label: z.string().min(1), value: z.string().min(1) }))
+    .default([]),
 });
 export type Paper = z.infer<typeof Paper>;
+
+/**
+ * One part of a narrative series — depth 2 of the three depths on a paper
+ * page (docs/DESIGN_PLAN.md §8).
+ *
+ * Written as .docx and imported by scripts/import-series.mjs, never edited
+ * here. Blocks rather than markdown so nothing has to be parsed at runtime
+ * and no prose is ever passed through dangerouslySetInnerHTML.
+ */
+export const SeriesBlock = z.discriminatedUnion("type", [
+  z.object({
+    type: z.literal("heading"),
+    level: z.number().int().min(1).max(6),
+    text: z.string().min(1),
+  }),
+  z.object({ type: z.literal("paragraph"), text: z.string().min(1) }),
+]);
+export type SeriesBlock = z.infer<typeof SeriesBlock>;
+
+export const SeriesPart = z.object({
+  part: z.number().int().positive(),
+  title: z.string().min(1),
+  /** The line naming the series and the position in it. */
+  standfirst: z.string().optional(),
+  blocks: z.array(SeriesBlock).min(1),
+});
+export type SeriesPart = z.infer<typeof SeriesPart>;
+
+export const Series = z.array(SeriesPart);
 
 export const Collections = {
   sculptures: z.array(Sculpture),

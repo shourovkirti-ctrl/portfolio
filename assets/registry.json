@@ -1,7 +1,32 @@
 {
   "dev-probe": {
     "type": "image",
-    "lod0": { "url": "/dev/probe.bin", "bytes": 4096 },
+    "lod0": {
+      "url": "/dev/probe.bin",
+      "bytes": 4096
+    },
     "source": "fixture"
+  },
+  "matiranga": {
+    "type": "splat",
+    "source": "polycam",
+    "lod0": {
+      "url": "/local/splats/matiranga.189cd826.lod0.sog",
+      "bytes": 1094418,
+      "primitives": 80000
+    },
+    "lod1": {
+      "url": "/local/splats/matiranga.079a4cb7.lod1.sog",
+      "bytes": 3361666,
+      "primitives": 250000
+    },
+    "frame": {
+      "center": [
+        1.53,
+        6.74,
+        42.58
+      ],
+      "radius": 257.95
+    }
   }
 }

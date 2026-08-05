@@ -12,7 +12,15 @@
     "startDate": "2024-12-21",
     "endDate": "2025-01-19",
     "tourUrl": "https://sculpture-exhibition-shilpokola-keerti-2024.vercel.app/",
-    "counts": { "panoramas": 174, "works": 217, "halls": 5 }
+    "counts": { "panoramas": 174, "works": 217, "halls": 5 },
+    "summary": "A national juried exhibition of contemporary sculpture, held across five halls of the National Art Gallery. The works were lent by living artists and returned to them when it closed, so the exhibition as it stood — that arrangement, in those rooms — exists nowhere else.",
+    "contribution": "The 360° multimedia VR component, commissioned by the Academy's Production Department and shown as part of the exhibition itself rather than made afterwards. 174 panoramas, 5,625 hotspots. Almost every work was also scanned individually.",
+    "evidence": [
+      {
+        "label": "The tour, as published",
+        "href": "https://sculpture-exhibition-shilpokola-keerti-2024.vercel.app/"
+      }
+    ]
   },
   {
     "slug": "poster-e-july-obbhutthan",
@@ -34,7 +42,13 @@
     },
     "startDate": "2025-01-07",
     "endDate": "2025-01-19",
-    "counts": { "works": 22 }
+    "counts": { "works": 22 },
+    "summary": "Twenty-two works from Debashish Chakrabarty's series Rashtrojontrona, in red, yellow and black. Part of Taruner Utsab 2025, organised by the Academy's Production Department. The artist joined the opening from the United States.",
+    "contribution": "The augmented-reality layer: a QR code under each artwork, opening video and newspaper-excerpt context for that poster. The second consecutive national exhibition whose AR/VR component the Academy commissioned.",
+    "evidence": [
+      { "label": "The Daily Star, 11 January 2025 — report on the opening" }
+    ],
+    "evidenceNote": "The press covered the exhibition and described the interactive component, but named neither him nor the studio that built it."
   },
   {
     "slug": "brave-daughters-of-july",
@@ -50,7 +64,16 @@
       "bn": "জাতীয় চিত্রশালা",
       "en": "National Art Hall"
     },
-    "startDate": "2025-02-22"
+    "startDate": "2025-02-22",
+    "summary": "An exhibition on the part women took in the July uprising, and on those who were killed. It held photographs, posters, video and eyewitness accounts, and was opened by the mother of a martyr. Organised by the Academy with the July Revolutionary Alliance and PUNAB.",
+    "contribution": "The VR experience built for the exhibition. It later toured schools and colleges as part of the Academy's touring VR programme.",
+    "evidence": [
+      {
+        "label": "Dhaka Tribune, February 2025",
+        "href": "https://www.dhakatribune.com/showtime/374646"
+      }
+    ],
+    "evidenceNote": "No published account of this exhibition mentions its VR component. The record of that work is his own."
   },
   {
     "slug": "tale-of-the-darkroom-iii",
@@ -61,6 +84,9 @@
     "institution": {
       "bn": "এআইইউবি ফটোগ্রাফি ক্লাব",
       "en": "AIUB Photography Club"
-    }
+    },
+    "summary": "The flagship exhibition of the AIUB Photography Club, presented by the university's Office of Student Affairs. The first two editions, in 2017 and 2018, were national; the pandemic then stopped it for six years. It returned in 2024, international for the first time.",
+    "contribution": "The 360° archive of the exhibition — its first digital record. He has been associated with the club since 2012, which makes this a photographer preserving a photography exhibition at the place he learned in.",
+    "evidence": []
   }
 ]
