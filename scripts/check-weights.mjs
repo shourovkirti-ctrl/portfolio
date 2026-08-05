@@ -109,9 +109,51 @@ for (const route of ROUTES) {
   );
 }
 
+/**
+ * The other budget: what a 3D experience streams after the page is up.
+ *
+ * The first-load figures above deliberately exclude it — the renderer and the
+ * model arrive in a lazy chunk, after first paint, on the routes that ask for
+ * them. That is the right architecture and the wrong thing to stop measuring,
+ * because it is where the megabytes actually are. Sizes come from the
+ * registry rather than from disk, so this holds on a build machine that does
+ * not have the local copies.
+ *
+ * < 5 MB for what a phone gets (lod0), < 15 MB for a desktop (lod1) —
+ * docs/TECHNICAL_PLAN.md §6.
+ */
+const STREAM_BUDGET = { lod0: 5_000_000, lod1: 15_000_000 };
+
+const registry = JSON.parse(
+  readFileSync(resolve(root, "assets", "registry.json"), "utf8"),
+);
+
+const streamed = Object.entries(registry).filter(
+  ([, entry]) => entry.type === "splat" || entry.type === "mesh",
+);
+
+if (streamed.length) {
+  console.log("\nstreamed after first paint (renderer bundle not counted)");
+  for (const [id, entry] of streamed) {
+    for (const [lod, budget] of Object.entries(STREAM_BUDGET)) {
+      const variant = entry[lod];
+      if (!variant) continue;
+      const ok = variant.bytes <= budget;
+      if (!ok) failed = true;
+      console.log(
+        `  ${ok ? "✓" : "✗"} ${`${id}:${lod}`.padEnd(42)} ` +
+          `${kb(variant.bytes).padStart(7)} of ${kb(budget)}` +
+          (variant.primitives
+            ? ` · ${variant.primitives.toLocaleString("en-GB")} primitives`
+            : ""),
+      );
+    }
+  }
+}
+
 console.log(
   failed
-    ? "\nFAILED — a route is over its first-load budget."
-    : "\nOK — every route is inside its first-load budget.",
+    ? "\nFAILED — something is over its budget."
+    : "\nOK — every route and every streamed asset is inside its budget.",
 );
 process.exit(failed ? 1 : 0);

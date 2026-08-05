@@ -66,3 +66,9 @@ package-lock.json
 
 # claude code local settings (launch.json is shared)
 .claude/settings.local.json
+
+# raw capture content — source of truth lives outside git, see docs/TECHNICAL_PLAN.md §1
+/1_Content/
+
+# processed assets served locally until R2 exists
+/public/local/
